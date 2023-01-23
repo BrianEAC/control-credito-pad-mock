@@ -1,61 +1,66 @@
 {
-  "SaldoCliente": {
+  "Post": {
     "_": {
-      "items": 600
+      "items": 10
     },
-    "clienteRazonSocial": {
+    "cover": {
+      "regexp": "https://picsum\\.photos/seed/[0-9]{5}/1920/270"
+    },
+    "title": {
       "loremWords": {
         "minLength": 5,
         "maxLength": 20
       }
     },
-    "clienteCuit": {
-      "int": {
-        "min": 20000000,
-        "max": 99999999
+    "body": {
+      "loremParagraphs": {
+        "minLength": 10,
+        "maxLength": 100
       }
     },
-    "estado": {
-      "string": ["Habilitado", "Excedido", "Bloqueado"]
+    "category": {
+      "string": ["one", "two", "three"]
     },
-    "saldo": {
+    "isDraft": {
+      "boolean": {}
+    },
+    "views": {
       "int": {
-        "min": 10000,
-        "max": 999999
+        "min": 0,
+        "max": 1000
       }
     },
-    "saldoVencido": {
-      "int": {
-        "min": 10000,
-        "max": 999999
-      }
-    },
-    "fechaHoraLecturaSaldo": {
+    "createdAt": {
       "dateTime": {
-        "min": "2019-01-01T00:00:00Z",
-        "max": "2022-12-31T23:59:59Z"
+        "min": "2010-01-01T00:00:00Z",
+        "max": "2020-12-31T23:59:59Z"
       }
     },
-    "fechaHoraLecturaLimite": {
+    "comments": {
+      "hasMany": "Comment"
+    }
+  },
+  "Comment": {
+    "_": {
+      "items": 25
+    },
+    "email": {
+      "regexp": "[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
+    },
+    "body": {
+      "loremParagraphs": {
+        "minLength": 10,
+        "maxLength": 100
+      }
+    },
+    "createdAt": {
       "dateTime": {
-        "min": "2019-01-01T00:00:00Z",
-        "max": "2022-12-31T23:59:59Z"
+        "min": "2010-01-01T00:00:00Z",
+        "max": "2020-12-31T23:59:59Z"
       }
     },
-    "saldoPAD": {
-      "int": {
-        "min": 10000,
-        "max": 999999
-      }
-    },
-    "limite": {
-      "int": {
-        "min": 10000,
-        "max": 999999
-      }
-    },
-    "tipoDocumento": {
-      "string": ["1", "80", "86", "96"]
+    "post": {
+      "belongsTo": "Post"
     }
   }
 }
