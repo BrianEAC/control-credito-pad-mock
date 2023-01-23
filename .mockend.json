@@ -1,0 +1,61 @@
+{
+  "SaldoCliente": {
+    "_": {
+      "items": 600
+    },
+    "clienteRazonSocial": {
+      "loremWords": {
+        "minLength": 5,
+        "maxLength": 20
+      }
+    },
+    "clienteCuit": {
+      "int": {
+        "min": 20000000,
+        "max": 99999999
+      }
+    },
+    "estado": {
+      "string": ["Habilitado", "Excedido", "Bloqueado"]
+    },
+    "saldo": {
+      "int": {
+        "min": 10000,
+        "max": 999999
+      }
+    },
+    "saldoVencido": {
+      "int": {
+        "min": 10000,
+        "max": 999999
+      }
+    },
+    "fechaHoraLecturaSaldo": {
+      "dateTime": {
+        "min": "2019-01-01T00:00:00Z",
+        "max": "2022-12-31T23:59:59Z"
+      }
+    },
+    "fechaHoraLecturaLimite": {
+      "dateTime": {
+        "min": "2019-01-01T00:00:00Z",
+        "max": "2022-12-31T23:59:59Z"
+      }
+    },
+    "saldoPAD": {
+      "int": {
+        "min": 10000,
+        "max": 999999
+      }
+    },
+    "limite": {
+      "int": {
+        "min": 10000,
+        "max": 999999
+      }
+    },
+    "tipoDocumento": {
+      "string": ["1", "80", "86", "96"]
+    },
+    "id": "string"
+  }
